@@ -30,4 +30,4 @@ $ npm start
 ```
 
 You will see a window show up like the following:
-![The first App](first_app.png)
+![The first App](first_app.PNG)
