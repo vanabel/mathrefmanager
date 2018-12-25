@@ -8,8 +8,9 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
+badd +63 ~/development/nodejs-dev/mathrefmanager/.gitignore
+badd +1 ~/development/nodejs-dev/mathrefmanager/README.md
 badd +15 ~/development/nodejs-dev/mathrefmanager/main.js
-badd +14 ~/development/nodejs-dev/mathrefmanager/README.md
 badd +1 /tmp/bash-fc.94dOhx
 badd +1 /tmp/bash-fc.XeYWwF
 badd +1 ~/test.py
@@ -62,6 +63,28 @@ exe s:l
 normal! zt
 33
 normal! 0
+tabedit ~/development/nodejs-dev/mathrefmanager/.gitignore
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=1 winheight=1 winminwidth=1 winwidth=1
+argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 3 - ((2 * winheight(0) + 13) / 26)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+3
+normal! 011|
 tabedit ~/development/nodejs-dev/mathrefmanager/main.js
 set splitbelow splitright
 set nosplitbelow
